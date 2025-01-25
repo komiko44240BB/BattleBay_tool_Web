@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e7edf3; /* Light grayish-blue background */
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left, .right {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff; /* Keep the form sections white for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info div {
+    font-size: 16px;
+}
+
+.variable {
+    font-weight: bold;
+    color: #007BFF;
+    margin-left: 5px;
+}
+
+.base-stat {
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    margin: 20px 0;
+    background: #f8fbff; /* Soft blue highlight */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table td {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+table td:first-child {
+    color: #666;
+}
+
+table td:last-child {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    width: 48%;
+}
+
+.form-group label {
+    flex: 1;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.form-group select {
+    flex: 2;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s;
+}
+
+.form-group select:hover,
+.form-group select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
