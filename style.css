@@ -1,9 +1,23 @@
+:root {
+    /* Color variables for dark theme */
+    --background-color: #1e1e2f;
+    --container-bg-color: #2b2b3b;
+    --light-text-color: #e4e4e6;
+    --highlight-text-color: #62d2ff;
+    --secondary-text-color: #a9a9b0;
+    --border-color: #444;
+    --border-light-color: #555;
+    --image-bg-color: #3c3c4e;
+    --base-stat-bg-color: #333448;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #e7edf3; /* Light grayish-blue background */
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--light-text-color);
 }
 
 .container {
@@ -12,11 +26,12 @@ body {
     gap: 20px;
 }
 
-.left, .right {
-    border: 1px solid #ddd;
+.left,
+.right {
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    background: #fff; /* Keep the form sections white for readability */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: var(--container-bg-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
     padding: 20px;
     width: 48%;
 }
@@ -38,8 +53,8 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 8px;
-    background: #f0f0f0;
-    border: 1px solid #ddd;
+    background: var(--image-bg-color);
+    border: 1px solid var(--border-light-color);
     margin-right: 20px;
 }
 
@@ -55,17 +70,17 @@ body {
 
 .variable {
     font-weight: bold;
-    color: #007BFF;
+    color: var(--highlight-text-color);
     margin-left: 5px;
 }
 
 .base-stat {
     font-size: 28px;
     font-weight: bold;
-    color: #555;
+    color: var(--light-text-color);
     text-align: center;
     margin: 20px 0;
-    background: #f8fbff; /* Soft blue highlight */
+    background: var(--base-stat-bg-color);
     padding: 10px 20px;
     border-radius: 8px;
 }
@@ -79,16 +94,16 @@ table {
 table td {
     padding: 10px;
     font-size: 14px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
 }
 
 table td:first-child {
-    color: #666;
+    color: var(--secondary-text-color);
 }
 
 table td:last-child {
     font-weight: bold;
-    color: #007BFF;
+    color: var(--highlight-text-color);
 }
 
 .right {
@@ -107,23 +122,24 @@ table td:last-child {
     flex: 1;
     font-size: 14px;
     margin-right: 10px;
-    color: #555;
+    color: var(--light-text-color);
 }
 
-.form-group select {
+.form-group select,
+.form-group input {
     flex: 2;
     padding: 8px 10px;
     font-size: 14px;
-    color: #333;
-    border: 1px solid #ddd;
+    color: var(--light-text-color);
+    border: 1px solid var(--border-light-color);
     border-radius: 6px;
-    background-color: #fff;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-bg-color);
+    box-shadow: inset 0 2px 4px var(--shadow-color);
     transition: border-color 0.2s;
 }
 
 .form-group select:hover,
 .form-group select:focus {
-    border-color: #007BFF;
+    border-color: var(--highlight-text-color);
     outline: none;
 }

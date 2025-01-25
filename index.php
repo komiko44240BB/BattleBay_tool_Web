@@ -58,38 +58,54 @@
             <div class="form-group">
                 <label for="item_type">Item Type:</label>
                 <select id="item_type">
-                    <option></option>
+                    <option class="item_type_selected" value="default" selected> Choose an option</option>
+                    <option class="item_type_selected" id="weapon" value="weapon">Weapon (red)</option>
+                    <option class="item_type_selected" id="passive" value="passive">Passive (blue)</option>
+                    <option class="item_type_selected" id="utility" value="utility">Utility (yellow)</option>
+                    <option class="item_type_selected" id="healing" value="healing">Healing (green)</option>
+                    <option class="item_type_selected" id="teal" value="teal">Teal (teal)</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="item_rarity">Item Rarity:</label>
                 <select id="item_rarity">
-                    <option></option>
+                    <option class="item_rarity_selected" value="default" selected> Choose an option</option>
+                    <option class="item_rarity_selected" id="common" value="common">Common</option>
+                    <option class="item_rarity_selected" id="uncommon" value="uncommon">Uncommon</option>
+                    <option class="item_rarity_selected" id="rare" value="rare">Rare</option>
+                    <option class="item_rarity_selected" id="epic" value="epic">Epic</option>
+                    <option class="item_rarity_selected" id="legendary" value="legendary">Legendary</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="item_name">Item Name:</label>
                 <select id="item_name">
-                    <option></option>
+                    <option class="item_name_selected" value="default" selected>Choose an option</option>
+                    <?php
+                        $item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_cannon','galting_gun','carronade','grenade_launcher','standard_mortar','long_range_mortar','ballpark_mortar','big_berta',
+                        'standard_torpedo','big_torpedo','swift_torpedo','triple_torpedo','railgun','missile_launcher','multi_missile','mine','flare_gun','napalm_launcher','fire_bomb','standard_shield',
+                        'big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield','frost_blaster','frost_launcher','repair_box_launcher','repair_pulse','duct_tape',
+                        'repair_bolt','repair_plasma','defence_wall','defence_aura','bloster_armor','cleanse_pulse'];
+                        foreach ($item_name as $name) {
+                            echo "<option class='item_name_selected' id='$name' value='$name'>".ucfirst(str_replace('_', ' ',$name))."</option>";
+                        }
+                    ?>
                 </select>
             </div>
             <div class="form-group">
                 <label for="item_level">Item Level:</label>
-                <select id="item_level">
-                    <?php
-                    for ($i = 1; $i < 50; $i++) {
-                        echo "<option value='$i'>$i</option>";
-                    }
-                    ?>
-                    <option></option>
-                </select>
+                <input id="item_level" type="number" min="1" max="50">
+                </input>
             </div>
             <div class="form-group">
                 <label for="training_level">Training Level:</label>
                 <select id="training_level">
-                    <option></option>
+                    <!-- js takes over here -->
                 </select>
             </div>
+            <div class="form-group">
+            </div>
+            <!-- to be done -->
             <div class="form-group">
                 <label for="perk_1">Perk 1:</label>
                 <select id="perk_1">
@@ -97,7 +113,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="perk_2">Perk 2:</label>
+                <label for="perk_2">Perk 2:</label> 
                 <select id="perk_2">
                     <option></option>
                 </select>
@@ -114,6 +130,7 @@
                     <option></option>
                 </select>
             </div>
+            <!-- end -->
         </div>
     </div>
 </body>
