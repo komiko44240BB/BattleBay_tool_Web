@@ -63,7 +63,7 @@
                     <option class="item_type_selected" id="passive" value="passive">Passive (blue)</option>
                     <option class="item_type_selected" id="utility" value="utility">Utility (yellow)</option>
                     <option class="item_type_selected" id="healing" value="healing">Healing (green)</option>
-                    <option class="item_type_selected" id="teal" value="teal">Teal (teal)</option>
+                    <option class="item_type_selected" id="support" value="support">Support (teal)</option>
                 </select>
             </div>
             <div class="form-group">
